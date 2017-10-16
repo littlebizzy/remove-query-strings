@@ -1,1 +1,0 @@
-# remove-query-strings
