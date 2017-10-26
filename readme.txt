@@ -5,7 +5,7 @@ Tags: remove, query, strings, string, from, static, resources, css, js, seo, spe
 Requires at least: 4.4
 Tested up to: 4.8
 Requires PHP: 7.0
-Stable tag: 1.2.4
+Stable tag: 1.2.5
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Prefix: RMQRST
@@ -16,12 +16,12 @@ Removes all query strings from static resources meaning that proxy servers and b
 
 Remove Query Strings is a simple plugin that automatically removes query strings from static resources on your WordPress website. By activating the plugin and refreshing your website on the frontend and then checking its source code (clear any caches), you will be able to see that query string have been removed from source URLs.
 
-By default, this plugin only removes query strings:
+By default, this plugin only removes these query strings:
 
     ?=
-	?v=
-	?ver=
-	?version=
+    ?v=
+    ?ver=
+    ?version=
 
 Prior to version 1.2, only `?=ver` was removed, but after further testing showed extensive use of other versioning strings we added three others to the list. The logic behind this is that common versioning strings are perhaps 90% or more of the common strings that can be safely removed to improve caching; moreover, the "keyless" strings `?=` are also removed by default because they are impossible to define as a constant anyways. In other words, the plugin assumes that keyless and common versioning strings are the exact reason why you would install a plugin such as this.
 
@@ -31,7 +31,7 @@ To remove more types of query strings (unlimited), simply use the following cons
 
     define('REMOVE_QUERY_STRING_ARGS', 'v,ver,version,my-arg,other-arg');
 
-Please note that if using this defined constant, the default "ver" string removal will be disabled, meaning that you should re-define the "ver" string in the comma-separated list shown above to ensure that it's properly removed.
+Please note that if using this defined constant, the default "ver" string removal will be disabled, meaning that you should re-define the "ver" string in the comma-separated list shown above to ensure that it's properly removed. Even when using the defined constant, the keyless strings will still be removed, since they are impossible to define.
 
 While the necessity of this function has been debated, most SEO and loading speed tools such as GTMetrix, Pingdom, etc still recommend removing all query strings from static resources. The reason being that some proxy servers (etc) that are part of the internet's underlying infrastructure (or your unique browsing connection) will be able to cache your website's content better when query strings do not exist. In other words, having query strings on static resources makes those resources look like many different resources rather than a single resource. It is also a valuable performance enhancing method if your web server (esp. Nginx) is using a caching method such as FastCGI or proxy_pass (reverse proxy caches).
 
@@ -41,13 +41,13 @@ By using this plugin, your site may see a performance boost in certain situation
 
 About filters, you can add the code in functions.php or in other plugin. There are two ways to handle the filter, with or withour $src extra parameter, for example:
 
-// Only $unwanted_args array parameter (for example if you do not want to modify the wp-config.php)
+    // Only $unwanted_args array parameter (for example if you do not want to modify the wp-config.php)
 add_filter('rmqrst_unwanted_args', 'remove_query_strings_test');
 function remove_query_strings_test($unwanted_args) {
 	return array('my-custom-arg', 'another-arg);
 }
 
-// Parameters $unwanted_args array and URL $src that will be modified (if you want to change the args to remove only for specific URLs)
+    // Parameters $unwanted_args array and URL $src that will be modified (if you want to change the args to remove only for specific URLs)
 add_filter('rmqrst_unwanted_args', 'remove_query_strings_test_2', 10, 2);
 function remove_query_strings_test_2($unwanted_args, $src) {
 	// Add 'test' arg to remove, only for this URL
@@ -71,11 +71,11 @@ This plugin has been designed for use on LEMP (Nginx) web servers with PHP 7.0 a
 * Includes CSS: No
 * Database Storage: No
   * Transients: No
-  * Options: No
-* Database Queries: No
+  * Options: Yes
+* Database Queries: Backend only
 * Must-Use Support: Yes
 * Multi-site Support: No
-* Uninstalls Data: N/A
+* Uninstalls Data: Yes
 
 #### Code Inspiration ####
 
@@ -91,6 +91,10 @@ We invite you to check out a few other related free plugins that our team has al
 
 * [Disable Emojis](https://wordpress.org/plugins/disable-emojis-littlebizzy/)
 * [Disable XML-RPC](https://wordpress.org/plugins/disable-xml-rpc-littlebizzy/)
+* [Remove Category Base](https://wordpress.org/plugins/remove-category-base-littlebizzy/)
+* [Disable Author Pages](https://wordpress.org/plugins/disable-author-pages-littlebizzy/)
+* [404 To Homepage](https://wordpress.org/plugins/404-to-homepage-littlebizzy/)
+* [Force HTTPS](https://wordpress.org/plugins/force-https-littlebizzy/)
 * [Server Status](https://wordpress.org/plugins/server-status-littlebizzy/)
 
 #### Special Thanks ####
@@ -124,6 +128,11 @@ There is a settings page where you can exclude certain types of query strings.
 Please avoid leaving negative reviews in order to get a feature implemented. Instead, we kindly ask that you post your feedback on the wordpress.org support forums by tagging this plugin in your post. If needed, you may also contact our homepage.
 
 == Changelog ==
+
+= 1.2.5 =
+* optimized plugin code
+* updated recommended plugins
+* added rating request
 
 = 1.2.4 =
 * minor code tweaks
