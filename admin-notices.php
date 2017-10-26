@@ -28,7 +28,7 @@ final class RMQRST_Admin_Notices {
 	/**
 	 * Plugin suggestions
 	 */
-	private $days_dismissing_suggestions = 120;
+	private $days_dismissing_suggestions = 45;
 	private $suggestions_message = '%plugin% recommends the following free plugins:';
 	private $suggestions = array(
 		'disable-emojis-littlebizzy' => array(
