@@ -11,8 +11,13 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Prefix: RMQRST
 */
 
+// Admin Notices module
+require_once dirname(__FILE__).'/admin-notices.php';
+RMQRST_Admin_Notices::instance(__FILE__);
 
-/* Initialization */
+/**
+ * Plugin code
+ */
 
 // Block direct calls
 if (!function_exists('add_action'))
@@ -22,12 +27,6 @@ if (!function_exists('add_action'))
 define('RMQRST_FILE', __FILE__);
 define('RMQRST_PATH', dirname(RMQRST_FILE));
 define('RMQRST_VERSION', '1.2.5');
-
-// Admin Notices module
-require_once(dirname(__FILE__).'/admin-notices.php');
-RMQRST_Admin_Notices::instance(__FILE__);
-register_uninstall_hook(__FILE__, array('RMQRST_Admin_Notices', 'uninstall'));
-
 
 /* WP hooks */
 
