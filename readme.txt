@@ -5,6 +5,7 @@ Tags: remove, query, strings, string, from, static, resources, css, js, seo, spe
 Requires at least: 4.4
 Tested up to: 4.8
 Requires PHP: 7.0
+Multisite support: No
 Stable tag: 1.2.5
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
