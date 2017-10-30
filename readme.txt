@@ -20,14 +20,13 @@ Removes all query strings from static resources meaning that proxy servers and b
 * [Plugin Homepage](https://www.littlebizzy.com/plugins/remove-query-strings)
 * [Plugin GitHub](https://github.com/littlebizzy/remove-query-strings/)
 
+#### The Long Version ####
+
 Remove Query Strings is a simple plugin that automatically removes query strings from static resources on your WordPress website. By activating the plugin and refreshing your website on the frontend and then checking its source code (clear any caches), you will be able to see that query string have been removed from source URLs.
 
-By default, this plugin only removes these query strings:
+By default, only the following query string types are removed:
 
-    ?=
-    ?v=
-    ?ver=
-    ?version=
+    ?=, ?v=, ?ver=, ?version=
 
 Prior to version 1.2, only `?=ver` was removed, but after further testing showed extensive use of other versioning strings we added three others to the list. The logic behind this is that common versioning strings are perhaps 90% or more of the common strings that can be safely removed to improve caching; moreover, the "keyless" strings `?=` are also removed by default because they are impossible to define as a constant anyways. In other words, the plugin assumes that keyless and common versioning strings are the exact reason why you would install a plugin such as this.
 
@@ -48,20 +47,20 @@ By using this plugin, your site may see a performance boost in certain situation
 About filters, you can add the code in functions.php or in other plugin. There are two ways to handle the filter, with or withour $src extra parameter, for example:
 
     // Only $unwanted_args array parameter (for example if you do not want to modify the wp-config.php)
-add_filter('rmqrst_unwanted_args', 'remove_query_strings_test');
-function remove_query_strings_test($unwanted_args) {
+    add_filter('rmqrst_unwanted_args', 'remove_query_strings_test');
+    function remove_query_strings_test($unwanted_args) {
 	return array('my-custom-arg', 'another-arg);
-}
+    }
 
     // Parameters $unwanted_args array and URL $src that will be modified (if you want to change the args to remove only for specific URLs)
-add_filter('rmqrst_unwanted_args', 'remove_query_strings_test_2', 10, 2);
-function remove_query_strings_test_2($unwanted_args, $src) {
+    add_filter('rmqrst_unwanted_args', 'remove_query_strings_test_2', 10, 2);
+    function remove_query_strings_test_2($unwanted_args, $src) {
 	// Add 'test' arg to remove, only for this URL
 	if ($src == 'http://myhost/wp-includes/js/jquery/jquery.js?ver=1.12.4&test=on') {
 		$unwanted_args[] = 'test';
 	}
 	return $unwanted_args;
-}
+    }
 
 This filter provides full control about what the plugin is doing, so an advanced user can customize the remove arg feature even for specific URLs.
 
@@ -71,7 +70,7 @@ This plugin has been designed for use on LEMP (Nginx) web servers with PHP 7.0 a
 
 #### WP Admin Notices ####
 
-This plugin generates 2 [Admin Notices](https://codex.wordpress.org/Plugin_API/Action_Reference/admin_notices) in the WP Admin dashboard. The first is a notice that fires during plugin activation which recommends several related free plugins that we believe will enhance this plugin's features; this notice will re-appear approximately once every 5 months, as our code and recommendations evolve. The second is a notice that fires a few days after plugin activation which asks for a 5-star rating of this plugin on its WordPress.org profile page. This notice will re-appear approximately once every 8 months. These notices can be dismissed by clicking the (x) symbol in the upper right of the notice box. These notices may confuse certain users, but are appreciated by the majority of our users, who understand these notices help to support our free contributions to the WordPress community. If you feel that these notices are too "annoying" than we encourage you to consider one or more of our upcoming premium plugins that combine several free plugin features into a single control panel. Another alternative would be to develop your own plugins for WordPress, if you feel that supporting free plugin authors is not something that interests you.
+This plugin generates multiple [Admin Notices](https://codex.wordpress.org/Plugin_API/Action_Reference/admin_notices) in the WP Admin dashboard. The first is a notice that fires during plugin activation which recommends several related free plugins that we believe will enhance this plugin's features; this notice will re-appear approximately once every 5 months as our code and recommendations evolve. The second is a notice that fires a few days after plugin activation which asks for a 5-star rating of this plugin on its WordPress.org profile page. This notice will re-appear approximately once every 8 months. These notices can be dismissed by clicking the (x) symbol in the upper right of the notice box. These notices may confuse certain users, but are appreciated by the majority of our userbase, who understand that these notices support our free contributions to the WordPress community. If you feel that these notices are too "annoying" than we encourage you to consider one or more of our upcoming premium plugins that combine several free plugin features into a single control panel. Another alternative would be to develop your own plugins for WordPress, if you feel that supporting free plugin authors is not something that interests you.
 
 #### Plugin Features ####
 
