@@ -1,7 +1,7 @@
 === Remove Query Strings From Static Resources ===
 
 Contributors: littlebizzy
-Tags: remove, query, strings, string, from, static, resources, css, js, seo, speed
+Tags: remove, query, strings, static, resources
 Requires at least: 4.4
 Tested up to: 4.8
 Requires PHP: 7.0
@@ -19,6 +19,7 @@ Removes all query strings from static resources meaning that proxy servers and b
 
 * [Plugin Homepage](https://www.littlebizzy.com/plugins/remove-query-strings)
 * [Plugin GitHub](https://github.com/littlebizzy/remove-query-strings/)
+* [SlickStack.io](https://slickstack.io)
 
 #### The Long Version ####
 
@@ -68,23 +69,23 @@ This filter provides full control about what the plugin is doing, so an advanced
 
 This plugin has been designed for use on LEMP (Nginx) web servers with PHP 7.0 and MySQL 5.7 to achieve best performance. All of our plugins are meant for single site WordPress installations only; for both performance and security reasons, we highly recommend against using WordPress Multisite for the vast majority of projects.
 
-#### WP Admin Notices ####
-
-This plugin generates multiple [Admin Notices](https://codex.wordpress.org/Plugin_API/Action_Reference/admin_notices) in the WP Admin dashboard. The first is a notice that fires during plugin activation which recommends several related free plugins that we believe will enhance this plugin's features; this notice will re-appear approximately once every 5 months as our code and recommendations evolve. The second is a notice that fires a few days after plugin activation which asks for a 5-star rating of this plugin on its WordPress.org profile page. This notice will re-appear approximately once every 8 months. These notices can be dismissed by clicking the (x) symbol in the upper right of the notice box. These notices may confuse certain users, but are appreciated by the majority of our userbase, who understand that these notices support our free contributions to the WordPress community. If you feel that these notices are too "annoying" than we encourage you to consider one or more of our upcoming premium plugins that combine several free plugin features into a single control panel. Another alternative would be to develop your own plugins for WordPress, if you feel that supporting free plugin authors is not something that interests you.
-
 #### Plugin Features ####
 
 * Settings Page: No
-* Upgrade Available: No
-* Includes Media: No
-* Includes CSS: No
-* Database Storage: No
+* Premium Version Available: No
+* Includes Media (Images, Icons, Etc): No
+* Includes CSS: None
+* Database Storage: Yes
   * Transients: No
   * Options: Yes
-* Database Queries: Backend only
-* Must-Use Support: Yes
-* Multi-site Support: No
-* Uninstalls Data: Yes
+* Database Queries: Backend Only
+* Must-Use Plugin Support: Yes (Use With MU [Autoloader](https://github.com/littlebizzy/autoloader))
+* Multisite Support: No
+* Uninstalls Data: Yes (Deletes Options)
+
+#### WP Admin Notices ####
+
+This plugin generates multiple [Admin Notices](https://codex.wordpress.org/Plugin_API/Action_Reference/admin_notices) in the WP Admin dashboard. The first is a notice that fires during plugin activation which recommends several related free plugins that we believe will enhance this plugin's features; this notice will re-appear approximately once every 5 months as our code and recommendations evolve. The second is a notice that fires a few days after plugin activation which asks for a 5-star rating of this plugin on its WordPress.org profile page. This notice will re-appear approximately once every 8 months. These notices can be dismissed by clicking the (x) symbol in the upper right of the notice box. These notices may confuse certain users, but are appreciated by the majority of our userbase, who understand that these notices support our free contributions to the WordPress community. If you feel that these notices are too "annoying" than we encourage you to consider one or more of our upcoming premium plugins that combine several free plugin features into a single control panel. Another alternative would be to develop your own plugins for WordPress, if you feel that supporting free plugin authors is not something that interests you.
 
 #### Code Inspiration ####
 
