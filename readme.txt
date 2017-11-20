@@ -3,10 +3,10 @@
 Contributors: littlebizzy
 Tags: remove, query, strings, static, resources
 Requires at least: 4.4
-Tested up to: 4.8
+Tested up to: 4.9
 Requires PHP: 7.0
 Multisite support: No
-Stable tag: 1.2.5
+Stable tag: 1.2.6
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Prefix: RMQRST
@@ -18,8 +18,8 @@ Removes all query strings from static resources meaning that proxy servers and b
 Removes all query strings from static resources meaning that proxy servers and beyond can better cache your site content (plus, better SEO scores).
 
 * [Plugin Homepage](https://www.littlebizzy.com/plugins/remove-query-strings)
-* [Plugin GitHub](https://github.com/littlebizzy/remove-query-strings/)
-* [SlickStack.io](https://slickstack.io)
+* [Plugin GitHub](https://github.com/littlebizzy/remove-query-strings)
+* [SlickStack](https://slickstack.io)
 
 #### The Long Version ####
 
@@ -35,7 +35,7 @@ Example: (i.e. `?ver=1.12.4` is removed from the end of the URL source for jQuer
 
 To remove more types of query strings (unlimited), simply use the following constant in your `wp-config.php` file to define which strings to remove:
 
-    define('REMOVE_QUERY_STRING_ARGS', 'v,ver,version,my-arg,other-arg');
+    define('REMOVE_QUERY_STRING_ARGS', 'v,ver,version,other');
 
 Please note that if using this defined constant, the default "ver" string removal will be disabled, meaning that you should re-define the "ver" string in the comma-separated list shown above to ensure that it's properly removed. Even when using the defined constant, the keyless strings will still be removed, since they are impossible to define.
 
@@ -72,20 +72,21 @@ This plugin has been designed for use on LEMP (Nginx) web servers with PHP 7.0 a
 #### Plugin Features ####
 
 * Settings Page: No
-* Premium Version Available: No
+* Premium Version Available: Yes ([Speed Demon](https://www.littlebizzy.com/plugins/speed-demon))
 * Includes Media (Images, Icons, Etc): No
-* Includes CSS: None
+* Includes CSS: No
 * Database Storage: Yes
   * Transients: No
   * Options: Yes
-* Database Queries: Backend Only
-* Must-Use Plugin Support: Yes (Use With MU [Autoloader](https://github.com/littlebizzy/autoloader))
+  * Creates New Tables: No
+* Database Queries: Backend Only (Options API Cache)
+* Must-Use Support: Yes (Use With [Autoloader](https://github.com/littlebizzy/autoloader))
 * Multisite Support: No
-* Uninstalls Data: Yes (Deletes Options)
+* Uninstalls Data: Yes
 
 #### WP Admin Notices ####
 
-This plugin generates multiple [Admin Notices](https://codex.wordpress.org/Plugin_API/Action_Reference/admin_notices) in the WP Admin dashboard. The first is a notice that fires during plugin activation which recommends several related free plugins that we believe will enhance this plugin's features; this notice will re-appear approximately once every 5 months as our code and recommendations evolve. The second is a notice that fires a few days after plugin activation which asks for a 5-star rating of this plugin on its WordPress.org profile page. This notice will re-appear approximately once every 8 months. These notices can be dismissed by clicking the (x) symbol in the upper right of the notice box. These notices may confuse certain users, but are appreciated by the majority of our userbase, who understand that these notices support our free contributions to the WordPress community. If you feel that these notices are too "annoying" than we encourage you to consider one or more of our upcoming premium plugins that combine several free plugin features into a single control panel. Another alternative would be to develop your own plugins for WordPress, if you feel that supporting free plugin authors is not something that interests you.
+This plugin generates multiple [Admin Notices](https://codex.wordpress.org/Plugin_API/Action_Reference/admin_notices) in the WP Admin dashboard. The first is a notice that fires during plugin activation which recommends several related free plugins that we believe will enhance this plugin's features; this notice will re-appear approximately once every 5 months as our code and recommendations evolve. The second is a notice that fires a few days after plugin activation which asks for a 5-star rating of this plugin on its WordPress.org profile page. This notice will re-appear approximately once every 8 months. These notices can be dismissed by clicking the **(x)** symbol in the upper right of the notice box. These notices may confuse certain users, but are appreciated by the majority of our userbase, who understand that these notices support our free contributions to the WordPress community. If you feel that these notices are too "annoying" than we encourage you to consider one or more of our upcoming premium plugins that combine several free plugin features into a single control panel. Another alternative would be to develop your own plugins for WordPress, if you feel that supporting free plugin authors is not something that interests you.
 
 #### Code Inspiration ####
 
@@ -99,22 +100,67 @@ This plugin was partially inspired either in "code or concept" by the open-sourc
 
 We invite you to check out a few other related free plugins that our team has also produced that you may find especially useful:
 
-* [Disable Emojis](https://wordpress.org/plugins/disable-emojis-littlebizzy/)
-* [Disable XML-RPC](https://wordpress.org/plugins/disable-xml-rpc-littlebizzy/)
-* [Remove Category Base](https://wordpress.org/plugins/remove-category-base-littlebizzy/)
-* [Disable Author Pages](https://wordpress.org/plugins/disable-author-pages-littlebizzy/)
 * [404 To Homepage](https://wordpress.org/plugins/404-to-homepage-littlebizzy/)
+* [CloudFlare](https://wordpress.org/plugins/cf-littlebizzy/)
+* [Disable Author Pages](https://wordpress.org/plugins/disable-author-pages-littlebizzy/)
+* [Disable Cart Fragments](https://wordpress.org/plugins/disable-cart-fragments-littlebizzy/)
+* [Disable Embeds](https://wordpress.org/plugins/disable-embeds-littlebizzy/)
+* [Disable Emojis](https://wordpress.org/plugins/disable-emojis-littlebizzy/)
+* [Disable Empty Trash](https://wordpress.org/plugins/disable-empty-trash-littlebizzy/)
+* [Disable Image Compression](https://wordpress.org/plugins/disable-image-compression-littlebizzy/)
+* [Disable Search](https://wordpress.org/plugins/disable-search-littlebizzy/)
+* [Disable WooCommerce Status](https://wordpress.org/plugins/disable-wc-status-littlebizzy/)
+* [Disable WooCommerce Styles](https://wordpress.org/plugins/diable-wc-styles-littlebizzy/)
+* [Disable XML-RPC](https://wordpress.org/plugins/disable-xml-rpc-littlebizzy/)
+* [Download Media](https://wordpress.org/plugins/download-media-littlebizzy/)
+* [Download Plugin](https://wordpress.org/plugins/download-plugin-littlebizzy/)
+* [Download Theme](https://wordpress.org/plugins/download-theme-littlebizzy/)
+* [Duplicate Post](https://wordpress.org/plugins/duplicate-post-littlebizzy/)
+* [Export Database](https://wordpress.org/plugins/export-database-littlebizzy/)
 * [Force HTTPS](https://wordpress.org/plugins/force-https-littlebizzy/)
+* [Force Strong Hashing](https://wordpress.org/plugins/force-strong-hashing-littlebizzy/)
+* [Google Analytics](https://wordpress.org/plugins/ga-littlebizzy/)
+* [Index Autoload](https://wordpress.org/plugins/index-autoload-littlebizzy/)
+* [Maintenance Mode](https://wordpress.org/plugins/maintenance-mode-littlebizzy/)
+* [Profile Change Alerts](https://wordpress.org/plugins/profile-change-alerts-littlebizzy/)
+* [Remove Category Base](https://wordpress.org/plugins/remove-category-base-littlebizzy/)
+* [Remove Query Strings](https://wordpress.org/plugins/remove-query-strings-littlebizzy/)
 * [Server Status](https://wordpress.org/plugins/server-status-littlebizzy/)
+* [StatCounter](https://wordpress.org/plugins/sc-littlebizzy/)
+* [View Defined Constants](https://wordpress.org/plugins/view-defined-constants-littlebizzy/)
+* [Virtual Robots.txt](https://wordpress.org/plugins/virtual-robotstxt-littlebizzy/)
+
+#### Premium Plugins ####
+
+We invite you to check out a few premium plugins that our team has also produced that you may find especially useful:
+
+* [Purge Them All](https://www.littlebizzy.com/plugins/purge-them-all)
+* [Speed Demon](https://www.littlebizzy.com/plugins/speed-demon)
+* [SEO Genius](https://www.littlebizzy.com/plugins/seo-genius)
+* [Great Migration](https://www.littlebizzy.com/plugins/great-migration)
 
 #### Special Thanks ####
 
 We thank the following groups for their generous contributions to the WordPress community which have particularly benefited us in developing our own free plugins and paid services:
 
 * [Automattic](https://automattic.com)
+* [Daniel Auener](http://www.danielauener.com)
 * [Delicious Brains](https://deliciousbrains.com)
+* [Greg Rickaby](https://gregrickaby.com)
+* [Matt Mullenweg](https://ma.tt)
+* [Mika Epstein](https://halfelf.org)
+* [Samuel Wood](http://ottopress.com)
+* [Scott Reilly](http://coffee2code.com)
+* [Jan Dembowski](https://profiles.wordpress.org/jdembowski)
+* [Jeff Starr](https://perishablepress.com)
+* [Jeff Chandler](https://jeffc.me)
+* [Jeff Matson](https://jeffmatson.net)
+* [John James Jacoby](https://jjj.blog)
+* [Leland Fiegel](https://leland.me)
+* [Rahul Bansal](https://profiles.wordpress.org/rahul286)
 * [Roots](https://roots.io)
 * [rtCamp](https://rtcamp.com)
+* [WP Chat](https://wpchat.com)
 * [WP Tavern](https://wptavern.com)
 
 #### Disclaimer ####
@@ -126,6 +172,8 @@ We released this plugin in response to our managed hosting clients asking for be
 1. Upload to `/wp-content/plugins/remove-query-strings-littlebizzy`
 2. Activate via WP Admin > Plugins
 3. Use the defined constant for optional customization
+4. Purge all caches
+5. Test plugin is working by checking source code
 
 == Frequently Asked Questions ==
 
@@ -138,6 +186,11 @@ There is a settings page where you can exclude certain types of query strings.
 Please avoid leaving negative reviews in order to get a feature implemented. Instead, we kindly ask that you post your feedback on the wordpress.org support forums by tagging this plugin in your post. If needed, you may also contact our homepage.
 
 == Changelog ==
+
+= 1.2.6 =
+* tested with WP 4.9
+* updated plugin meta
+* updated recommended plugins
 
 = 1.2.5 =
 * optimized plugin code
@@ -155,8 +208,8 @@ Please avoid leaving negative reviews in order to get a feature implemented. Ins
 * recommended plugins
 
 = 1.2.1 =
+* tested with WP 4.8
 * updated plugin meta
-* tested with WordPress 4.8
 
 = 1.2.0 =
 * added three more default string types
