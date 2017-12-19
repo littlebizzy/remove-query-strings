@@ -1,6 +1,7 @@
 === Remove Query Strings From Static Resources ===
 
 Contributors: littlebizzy
+Donate link: https://www.patreon.com/littlebizzy
 Tags: remove, query, strings, static, resources
 Requires at least: 4.4
 Tested up to: 4.9
