@@ -7,7 +7,7 @@ Requires at least: 4.4
 Tested up to: 4.9
 Requires PHP: 7.0
 Multisite support: No
-Stable tag: 1.2.8
+Stable tag: 1.3.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Prefix: RMQRST
@@ -36,7 +36,7 @@ Example: (i.e. `?ver=1.12.4` is removed from the end of the URL source for jQuer
 
 To remove more types of query strings (unlimited), simply use the following constant in your `wp-config.php` file to define which strings to remove:
 
-    define('REMOVE_QUERY_STRING_ARGS', 'ver,other');
+    define('REMOVE_QUERY_STRINGS_ARGS', 'v,ver,version');
 
 Please note that if using this defined constant, the default "ver" string removal will be disabled, meaning that you should re-define the "ver" string in the comma-separated list shown above to ensure that it's properly removed. Even when using the defined constant, the keyless strings will still be removed, since they are impossible to define.
 
@@ -141,20 +141,9 @@ We invite you to check out a few other related free plugins that our team has al
 
 We invite you to check out a few premium plugins that our team has also produced that you may find especially useful:
 
-* [Purge Them All](https://www.littlebizzy.com/plugins/purge-them-all)
 * [Speed Demon](https://www.littlebizzy.com/plugins/speed-demon)
 * [SEO Genius](https://www.littlebizzy.com/plugins/seo-genius)
 * [Great Migration](https://www.littlebizzy.com/plugins/great-migration)
-
-#### Related Services ####
-
-The following paid services are available on a case-by-case basis to upstanding members of the WordPress community:
-
-* [SSL Setup](https://www.littlebizzy.com/services/ssl)
-* [DNSSEC Setup](https://www.littlebizzy.com/services/dnssec)
-* [G Suite Setup](https://www.littlebizzy.com/services/google-apps)
-* [SendGrid Setup](https://www.littlebizzy.com/services/sendgrid)
-* [MailGun Setup](https://www.littlebizzy.com/services/mailgun)
 
 #### Special Thanks ####
 
@@ -203,6 +192,10 @@ There is a settings page where you can exclude certain types of query strings.
 Please avoid leaving negative reviews in order to get a feature implemented. Instead, we kindly ask that you post your feedback on the wordpress.org support forums by tagging this plugin in your post. If needed, you may also contact our homepage.
 
 == Changelog ==
+
+= 1.3.0 =
+* BREAKING CHANGE: the defined constant is now `define('REMOVE_QUERY_STRINGS_ARGS', 'v,ver,version');`
+* (old spelling no longer supported: `REMOVE_QUERY_STRING_ARGS`)
 
 = 1.2.8 =
 * better support for `define('DISABLE_NAG_NOTICES', true);`
