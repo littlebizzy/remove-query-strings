@@ -18,9 +18,11 @@ Removes all query strings from static resources meaning that proxy servers and b
 
 Removes all query strings from static resources meaning that proxy servers and beyond can better cache your site content (plus, better SEO scores).
 
+* [**JOIN OUR FREE FACEBOOK GROUP FOR SUPPORT!**](https://www.facebook.com/groups/littlebizzy/)
 * [Plugin Homepage](https://www.littlebizzy.com/plugins/remove-query-strings)
 * [Plugin GitHub](https://github.com/littlebizzy/remove-query-strings)
 * [SlickStack](https://slickstack.io)
+* [Starter](https://starter.littlebizzy.com)
 
 #### The Long Version ####
 
@@ -38,7 +40,7 @@ To remove more types of query strings (unlimited), simply use the following cons
 
     define('REMOVE_QUERY_STRINGS_ARGS', 'v,ver,version');
 
-Please note that if using this defined constant, the default "ver" string removal will be disabled, meaning that you should re-define the "ver" string in the comma-separated list shown above to ensure that it's properly removed. Even when using the defined constant, the keyless strings will still be removed, since they are impossible to define.
+Please note that even when using the defined constant, the keyless strings will still be removed, since they are impossible to define anyways.
 
 While the necessity of this function has been debated, most SEO and loading speed tools such as GTMetrix, Pingdom, etc still recommend removing all query strings from static resources. The reason being that some proxy servers (etc) that are part of the internet's underlying infrastructure (or your unique browsing connection) will be able to cache your website's content better when query strings do not exist. In other words, having query strings on static resources makes those resources look like many different resources rather than a single resource. It is also a valuable performance enhancing method if your web server (esp. Nginx) is using a caching method such as FastCGI or proxy_pass (reverse proxy caches).
 
@@ -109,15 +111,17 @@ We invite you to check out a few other related free plugins that our team has al
 
 * [404 To Homepage](https://wordpress.org/plugins/404-to-homepage-littlebizzy/)
 * [CloudFlare](https://wordpress.org/plugins/cf-littlebizzy/)
+* [Delete Expired Transients](https://wordpress.org/plugins/delete-expired-transients-littlebizzy/)
 * [Disable Author Pages](https://wordpress.org/plugins/disable-author-pages-littlebizzy/)
 * [Disable Cart Fragments](https://wordpress.org/plugins/disable-cart-fragments-littlebizzy/)
 * [Disable Embeds](https://wordpress.org/plugins/disable-embeds-littlebizzy/)
 * [Disable Emojis](https://wordpress.org/plugins/disable-emojis-littlebizzy/)
 * [Disable Empty Trash](https://wordpress.org/plugins/disable-empty-trash-littlebizzy/)
 * [Disable Image Compression](https://wordpress.org/plugins/disable-image-compression-littlebizzy/)
+* [Disable jQuery Migrate](https://wordpress.org/plugins/disable-jq-migrate-littlebizzy/)
 * [Disable Search](https://wordpress.org/plugins/disable-search-littlebizzy/)
 * [Disable WooCommerce Status](https://wordpress.org/plugins/disable-wc-status-littlebizzy/)
-* [Disable WooCommerce Styles](https://wordpress.org/plugins/diable-wc-styles-littlebizzy/)
+* [Disable WooCommerce Styles](https://wordpress.org/plugins/disable-wc-styles-littlebizzy/)
 * [Disable XML-RPC](https://wordpress.org/plugins/disable-xml-rpc-littlebizzy/)
 * [Download Media](https://wordpress.org/plugins/download-media-littlebizzy/)
 * [Download Plugin](https://wordpress.org/plugins/download-plugin-littlebizzy/)
@@ -144,12 +148,15 @@ We invite you to check out a few premium plugins that our team has also produced
 * [Speed Demon](https://www.littlebizzy.com/plugins/speed-demon)
 * [SEO Genius](https://www.littlebizzy.com/plugins/seo-genius)
 * [Great Migration](https://www.littlebizzy.com/plugins/great-migration)
+* [Security Guard](https://www.littlebizzy.com/plugins/security-guard)
+* [Genghis Khan](https://www.littlebizzy.com/plugins/genghis-khan)
 
 #### Special Thanks ####
 
 We thank the following groups for their generous contributions to the WordPress community which have particularly benefited us in developing our own free plugins and paid services:
 
 * [Automattic](https://automattic.com)
+* [Brad Touesnard](https://bradt.ca)
 * [Daniel Auener](http://www.danielauener.com)
 * [Delicious Brains](https://deliciousbrains.com)
 * [Greg Rickaby](https://gregrickaby.com)
@@ -166,6 +173,7 @@ We thank the following groups for their generous contributions to the WordPress 
 * [Rahul Bansal](https://profiles.wordpress.org/rahul286)
 * [Roots](https://roots.io)
 * [rtCamp](https://rtcamp.com)
+* [Ryan Hellyer](https://geek.hellyer.kiwi)
 * [WP Chat](https://wpchat.com)
 * [WP Tavern](https://wptavern.com)
 
@@ -177,7 +185,7 @@ We released this plugin in response to our managed hosting clients asking for be
 
 1. Upload to `/wp-content/plugins/remove-query-strings-littlebizzy`
 2. Activate via WP Admin > Plugins
-3. Use the defined constant for optional customization
+3. Use the defined constant for optional customization: `define('REMOVE_QUERY_STRINGS_ARGS', 'v,ver,version');`
 4. Purge all caches
 5. Test plugin is working by checking source code
 
@@ -185,7 +193,7 @@ We released this plugin in response to our managed hosting clients asking for be
 
 = How can I change this plugin's settings? =
 
-There is a settings page where you can exclude certain types of query strings.
+There is no settings page for best performance. Instead, use the defined constant.
 
 = I have a suggestion, how can I let you know? =
 
