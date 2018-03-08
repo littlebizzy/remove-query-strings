@@ -202,7 +202,7 @@ Please avoid leaving negative reviews in order to get a feature implemented. Ins
 == Changelog ==
 
 = 1.3.0 =
-* BREAKING CHANGE: the defined constant is now `define('REMOVE_QUERY_STRINGS_ARGS', 'v,ver,version');`
+* BREAKING CHANGE: the defined constant is now `REMOVE_QUERY_STRINGS_ARGS`
 * (old spelling no longer supported: `REMOVE_QUERY_STRING_ARGS`)
 * added warning for Multisite installations
 * updated recommended plugins
