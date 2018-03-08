@@ -15,10 +15,14 @@ Prefix: RMQRST
 require_once dirname(__FILE__).'/admin-notices.php';
 RMQRST_Admin_Notices::instance(__FILE__);
 
-
 /**
- * Plugin code
+ * Admin Notices Multisite check
+ * Uncomment //return to disable this plugin on Multisite installs
  */
+require_once dirname(__FILE__).'/admin-notices-ms.php';
+if (false !== \LittleBizzy\RemoveQueryStrings\Admin_Notices_MS::instance(__FILE__)) {
+	//return;
+}
 
 // Block direct calls
 if (!function_exists('add_action'))
