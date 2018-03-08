@@ -57,8 +57,8 @@ class RMQRST_Front_Filter {
 
 
 	/**
-	 * Check the wp-config.php constant REMOVE_QUERY_STRING_ARGS
-	 * Example: define('REMOVE_QUERY_STRING_ARGS', 'ver,test,w');
+	 * Check the wp-config.php constant REMOVE_QUERY_STRINGS_ARGS
+	 * Example: define('REMOVE_QUERY_STRINGS_ARGS', 'ver,test,w');
 	 */
 	private static function get_unwanted_args() {
 
@@ -68,13 +68,13 @@ class RMQRST_Front_Filter {
 			return $unwanted;
 
 		// Inspect wp-config.php constant
-		if (defined('REMOVE_QUERY_STRING_ARGS')) {
+		if (defined('REMOVE_QUERY_STRINGS_ARGS')) {
 
 			// Initialize user args
 			$args_user = array();
 
 			// Extract arguments
-			$args_const = explode(',', REMOVE_QUERY_STRING_ARGS);
+			$args_const = explode(',', REMOVE_QUERY_STRINGS_ARGS);
 			foreach ($args_const as $arg) {
 				$arg = trim($arg);
 				if ('' !== $arg)
