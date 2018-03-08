@@ -196,6 +196,8 @@ Please avoid leaving negative reviews in order to get a feature implemented. Ins
 = 1.3.0 =
 * BREAKING CHANGE: the defined constant is now `define('REMOVE_QUERY_STRINGS_ARGS', 'v,ver,version');`
 * (old spelling no longer supported: `REMOVE_QUERY_STRING_ARGS`)
+* added warning for Multisite installations
+* updated recommended plugins
 
 = 1.2.8 =
 * better support for `define('DISABLE_NAG_NOTICES', true);`
