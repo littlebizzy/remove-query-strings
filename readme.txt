@@ -7,7 +7,7 @@ Requires at least: 4.4
 Tested up to: 4.9
 Requires PHP: 7.0
 Multisite support: No
-Stable tag: 1.3.0
+Stable tag: 1.3.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Prefix: RMQRST
@@ -201,6 +201,9 @@ Please avoid leaving negative reviews in order to get a feature implemented. Ins
 
 == Changelog ==
 
+= 1.3.1 =
+* updated plugin meta
+
 = 1.3.0 =
 * BREAKING CHANGE: the defined constant is now `REMOVE_QUERY_STRINGS_ARGS`
 * (old spelling no longer supported: `REMOVE_QUERY_STRING_ARGS`)
@@ -208,45 +211,48 @@ Please avoid leaving negative reviews in order to get a feature implemented. Ins
 * updated recommended plugins
 
 = 1.2.8 =
-* better support for `define('DISABLE_NAG_NOTICES', true);`
+* better support for `DISABLE_NAG_NOTICES`
 
 = 1.2.7 =
+* partial support for `DISABLE_NAG_NOTICES`
 * updated plugin meta
-* partial support for `define('DISABLE_NAG_NOTICES', true);`
 
 = 1.2.6 =
 * tested with WP 4.9
-* updated plugin meta
 * updated recommended plugins
+* updated plugin meta
 
 = 1.2.5 =
 * optimized plugin code
 * updated recommended plugins
-* added rating request
+* added WP.org rating request notice
 
 = 1.2.4 =
-* minor code tweaks
+* optimized plugin code
 * updated plugin meta
 
 = 1.2.3 =
 * updated recommended plugins
 
 = 1.2.2 =
-* recommended plugins
+* added recommended plugins notice
 
 = 1.2.1 =
 * tested with WP 4.8
 * updated plugin meta
 
 = 1.2.0 =
-* added three more default string types
+* removes query strings `?=, ?v=, ?ver=, ?version=` by default
 
 = 1.1.1 =
 * updated plugin meta
 
 = 1.1.0 =
+* added support for `REMOVE_QUERY_STRING_ARGS`
 * removed settings page
-* added defined constant option
+* (no longer any database queries)
 
 = 1.0.0 =
 * initial release
+* tested with PHP 7.0
+* removes query strings `?ver=` by default
