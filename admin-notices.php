@@ -34,6 +34,11 @@ final class RMQRST_Admin_Notices {
 	private $days_dismissing_suggestions = 180; // 6 months reappear
 	private $suggestions_message = '%plugin% recommends the following free plugins:';
 	private $suggestions = array(
+		'minify-html-littlebizzy' => array(
+			'name' => 'Minify HTML',
+			'desc' => 'Tactfully minifies HTML output and markup to remove line breaks, whitespace, comments, and other code bloat to cleanup source code and improve speed.',
+			'filename' => 'minify-html.php',
+		),
 		'disable-jq-migrate-littlebizzy' => array(
 			'name' => 'Disable jQuery Migrate',
 			'desc' => 'Easily prevent the jQuery migrate script that is included with WordPress core from being loaded to slim down source code (for advanced users only).',
@@ -48,11 +53,6 @@ final class RMQRST_Admin_Notices {
 			'name' => 'Disable Emojis',
 			'desc' => 'Completely disables both the old and new versions of WordPress emojis, removes the corresponding javascript calls, and improves page loading times.',
 			'filename' => 'disable-emojis.php',
-		),
-		'disable-xml-rpc-littlebizzy' => array(
-			'name' => 'Disable XML-RPC',
-			'desc' => 'Completely disables all XML-RPC related functions in WordPress including pingbacks and trackbacks, and helps prevent attacks on the xmlrpc.php file.',
-			'filename' => 'disable-xml-rpc.php',
 		),
 		'cf-littlebizzy' => array(
 			'name' => 'CloudFlare',
