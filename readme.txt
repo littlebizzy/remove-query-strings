@@ -7,7 +7,7 @@ Requires at least: 4.4
 Tested up to: 4.9
 Requires PHP: 7.0
 Multisite support: No
-Stable tag: 1.3.1
+Stable tag: 1.3.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Prefix: RMQRST
@@ -22,7 +22,6 @@ Removes all query strings from static resources meaning that proxy servers and b
 * [Plugin Homepage](https://www.littlebizzy.com/plugins/remove-query-strings)
 * [Plugin GitHub](https://github.com/littlebizzy/remove-query-strings)
 * [SlickStack](https://slickstack.io)
-* [Starter](https://starter.littlebizzy.com)
 
 #### The Long Version ####
 
@@ -99,83 +98,13 @@ Note: This defined constant will only affect the notices mentioned above, and wi
 
 #### Code Inspiration ####
 
-This plugin was partially inspired either in "code or concept" by the open-source software and discussions mentioned below:
-
 * [Remove Query Strings From Static Resources](https://wordpress.org/plugins/remove-query-strings-from-static-resources/)
 * [Query Strings Remover](https://wordpress.org/plugins/query-strings-remover/)
 * [Remove Query Strings From Static Resources Like CSS & JS Files](https://wordpress.org/plugins/remove-query-strings/)
 
-#### Recommended Plugins ####
-
-We invite you to check out a few other related free plugins that our team has also produced that you may find especially useful:
-
-* [404 To Homepage](https://wordpress.org/plugins/404-to-homepage-littlebizzy/)
-* [CloudFlare](https://wordpress.org/plugins/cf-littlebizzy/)
-* [Delete Expired Transients](https://wordpress.org/plugins/delete-expired-transients-littlebizzy/)
-* [Disable Author Pages](https://wordpress.org/plugins/disable-author-pages-littlebizzy/)
-* [Disable Cart Fragments](https://wordpress.org/plugins/disable-cart-fragments-littlebizzy/)
-* [Disable Embeds](https://wordpress.org/plugins/disable-embeds-littlebizzy/)
-* [Disable Emojis](https://wordpress.org/plugins/disable-emojis-littlebizzy/)
-* [Disable Empty Trash](https://wordpress.org/plugins/disable-empty-trash-littlebizzy/)
-* [Disable Image Compression](https://wordpress.org/plugins/disable-image-compression-littlebizzy/)
-* [Disable jQuery Migrate](https://wordpress.org/plugins/disable-jq-migrate-littlebizzy/)
-* [Disable Search](https://wordpress.org/plugins/disable-search-littlebizzy/)
-* [Disable WooCommerce Status](https://wordpress.org/plugins/disable-wc-status-littlebizzy/)
-* [Disable WooCommerce Styles](https://wordpress.org/plugins/disable-wc-styles-littlebizzy/)
-* [Disable XML-RPC](https://wordpress.org/plugins/disable-xml-rpc-littlebizzy/)
-* [Download Media](https://wordpress.org/plugins/download-media-littlebizzy/)
-* [Download Plugin](https://wordpress.org/plugins/download-plugin-littlebizzy/)
-* [Download Theme](https://wordpress.org/plugins/download-theme-littlebizzy/)
-* [Duplicate Post](https://wordpress.org/plugins/duplicate-post-littlebizzy/)
-* [Export Database](https://wordpress.org/plugins/export-database-littlebizzy/)
-* [Force HTTPS](https://wordpress.org/plugins/force-https-littlebizzy/)
-* [Force Strong Hashing](https://wordpress.org/plugins/force-strong-hashing-littlebizzy/)
-* [Google Analytics](https://wordpress.org/plugins/ga-littlebizzy/)
-* [Index Autoload](https://wordpress.org/plugins/index-autoload-littlebizzy/)
-* [Maintenance Mode](https://wordpress.org/plugins/maintenance-mode-littlebizzy/)
-* [Profile Change Alerts](https://wordpress.org/plugins/profile-change-alerts-littlebizzy/)
-* [Remove Category Base](https://wordpress.org/plugins/remove-category-base-littlebizzy/)
-* [Remove Query Strings](https://wordpress.org/plugins/remove-query-strings-littlebizzy/)
-* [Server Status](https://wordpress.org/plugins/server-status-littlebizzy/)
-* [StatCounter](https://wordpress.org/plugins/sc-littlebizzy/)
-* [View Defined Constants](https://wordpress.org/plugins/view-defined-constants-littlebizzy/)
-* [Virtual Robots.txt](https://wordpress.org/plugins/virtual-robotstxt-littlebizzy/)
-
-#### Premium Plugins ####
-
-We invite you to check out a few premium plugins that our team has also produced that you may find especially useful:
-
-* [Speed Demon](https://www.littlebizzy.com/plugins/speed-demon)
-* [SEO Genius](https://www.littlebizzy.com/plugins/seo-genius)
-* [Great Migration](https://www.littlebizzy.com/plugins/great-migration)
-* [Security Guard](https://www.littlebizzy.com/plugins/security-guard)
-* [Genghis Khan](https://www.littlebizzy.com/plugins/genghis-khan)
-
 #### Special Thanks ####
 
-We thank the following groups for their generous contributions to the WordPress community which have particularly benefited us in developing our own free plugins and paid services:
-
-* [Automattic](https://automattic.com)
-* [Brad Touesnard](https://bradt.ca)
-* [Daniel Auener](http://www.danielauener.com)
-* [Delicious Brains](https://deliciousbrains.com)
-* [Greg Rickaby](https://gregrickaby.com)
-* [Matt Mullenweg](https://ma.tt)
-* [Mika Epstein](https://halfelf.org)
-* [Samuel Wood](http://ottopress.com)
-* [Scott Reilly](http://coffee2code.com)
-* [Jan Dembowski](https://profiles.wordpress.org/jdembowski)
-* [Jeff Starr](https://perishablepress.com)
-* [Jeff Chandler](https://jeffc.me)
-* [Jeff Matson](https://jeffmatson.net)
-* [John James Jacoby](https://jjj.blog)
-* [Leland Fiegel](https://leland.me)
-* [Rahul Bansal](https://profiles.wordpress.org/rahul286)
-* [Roots](https://roots.io)
-* [rtCamp](https://rtcamp.com)
-* [Ryan Hellyer](https://geek.hellyer.kiwi)
-* [WP Chat](https://wpchat.com)
-* [WP Tavern](https://wptavern.com)
+[Alex Georgiou](https://www.alexgeorgiou.gr), [Automattic](https://automattic.com), [Brad Touesnard](https://bradt.ca), [Daniel Auener](http://www.danielauener.com), [Delicious Brains](https://deliciousbrains.com), [Greg Rickaby](https://gregrickaby.com), [Matt Mullenweg](https://ma.tt), [Mika Epstein](https://halfelf.org), [Mike Garrett](https://mikengarrett.com), [Samuel Wood](http://ottopress.com), [Scott Reilly](http://coffee2code.com), [Jan Dembowski](https://profiles.wordpress.org/jdembowski), [Jeff Starr](https://perishablepress.com), [Jeff Chandler](https://jeffc.me), [Jeff Matson](https://jeffmatson.net), [Jeremy Wagner](https://jeremywagner.me), [John James Jacoby](https://jjj.blog), [Leland Fiegel](https://leland.me), [Luke Cavanagh](https://github.com/lukecav), [Paul Irish](https://www.paulirish.com), [Rahul Bansal](https://profiles.wordpress.org/rahul286), [Roots](https://roots.io), [rtCamp](https://rtcamp.com), [Ryan Hellyer](https://geek.hellyer.kiwi), [WP Chat](https://wpchat.com), [WP Tavern](https://wptavern.com)
 
 #### Disclaimer ####
 
@@ -201,6 +130,9 @@ Please avoid leaving negative reviews in order to get a feature implemented. Ins
 
 == Changelog ==
 
+= 1.3.2 =
+* updated recommended plugins
+
 = 1.3.1 =
 * updated plugin meta
 
@@ -223,9 +155,9 @@ Please avoid leaving negative reviews in order to get a feature implemented. Ins
 * updated plugin meta
 
 = 1.2.5 =
+* added rating request notice
 * optimized plugin code
 * updated recommended plugins
-* added WP.org rating request notice
 
 = 1.2.4 =
 * optimized plugin code
