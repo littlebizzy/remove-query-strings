@@ -7,11 +7,12 @@ Removes all query strings from static resources meaning that proxy servers and b
 
 ### Defined Constants
 
-    /* Plugin Meta */
+    /** Plugin Meta */
     define('DISABLE_NAG_NOTICES', true);
     
-    /* Remove Query Strings Functions */
-    define('REMOVE_QUERY_STRINGS_ARGS', 'v,ver,version');
+    /** Remove Query Strings Functions */
+    define('REMOVE_QUERY_STRINGS', true); // default = true
+    define('REMOVE_QUERY_STRINGS_ARGS', 'v,ver,version'); // default = v,ver,version
 
 ### Compatibility
 
